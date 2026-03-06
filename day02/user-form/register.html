@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>User Registration Form</title>
+    </head>
+    <body>
+        <header>
+            <!-- (도전) header : 로고 + 페이지 제목 -->
+        <img src ="media/logo.png" alt="logo">
+           <h1>User Registration</h1>
+             <!-- (도전) svg: 간단한 SVG 그래픽 -->
+            <svg width="80" height="50" aria-label="simple svg icon">
+            <circle cx="25" cy="25" r="18" stroke="black" stroke-width="2" fill="lightblue"></circle>
+            <rect x="50" y="10" width="25" height="30" stroke="black" stroke-width="2" fill="none"></rect>
+      </svg>
+         </header>
+             <!-- (도전) nav: 최소 3개 메뉴 -->
+            <nav>
+            <a href="#">Home</a> |
+            <a href="#">Register</a> |
+            <a href="#">About</a>
+            </nav>
+        <main>
+        <!-- (도전) section: 폼을 감싸고 섹션 제목 추가 -->
+         <section>
+            <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <!--폼 시작-->
+            <div>
+            <!--입력 그룹-->
+            <p>
+                <label for="username">사용자 이름:</label>
+                <input type="text" name="username" id="username" placeholder="사용자 이름"></p>
+            <p><label for="email">이메일:</label>
+                <input type="email" name="email" id="email" placeholder="사용자의 이메일 주소"></p>
+            <p><label for="password">비밀번호:</label>
+                <input type="password" name="password" id="password" placeholder="비밀번호"></p>
+            <p><label for="birthdate">생년월일:</label>
+                <input type="date" name="birthdate" id="birthdate"></p>
+            <p><label for="age">나이:</label>
+                <input type="number" name="age" id="age" min="18" max="100" placeholder="나이"></p>
+            </div>
+            <hr>
+            
+                <label for="satisfaction">서비스 만족도 (1~10):</label>
+                <input type="range" name="satisfaction" id="satisfaction" min="1" max="10" >
+                <hr>
+                <!--성별 구분-->
+            <div>
+                <p>성별 :</p>
+                
+                <input type="radio" name="gender" value="male" id="male">
+                <label for ="male">남성</label>
+
+                <input type="radio" name="gender" value="female" id="female">
+                <label for ="female">여성</label>
+
+                <input type="radio" name="gender" value="other" id="other">
+                <label for ="other">기타</label>
+            </div>
+            <hr>
+            <div>                
+                <!--관심사 구분-->
+               <p>관심사 :</p>
+                <input type="checkbox" name="interests" value="coding" id="coding"><label for="coding">Coding</label>
+                <input type="checkbox" name="interests" value="gaming" id="gaming"><label for="gaming">Gaming</label>
+                <input type="checkbox" name="interests" value="reading" id ="reading"><label for ="reading">Reading</label>
+            </div>
+            <hr>
+            <div>
+                <label for="country">국가선택:</label> 
+                <p></p>
+                <select name="country" id="country" >
+                    <option value="kr">South Korea</option>
+                    <option value="us">USA</option>
+                    <option value="jp">Japan</option>
+                    <option value="cn">China</option>
+                    <option value="uk">UK</option>
+                </select>
+            </div>
+            <p></p>
+            <div>
+                <button type="submit">제출</button>
+                <button type="reset">초기화</button>
+            </div>  
+        </form>
+        </section>
+        <!-- (도전) article: 등록 목적/안내 문구 -->
+        <article>
+            <canvas width="300" height="100" style="border:1px solid gray;"></canvas>
+            <h2>왜 회원가입을 해야 하나요?</h2>
+            <p>회원가입을 통해 다양한 서비스를 이용하실 수 있습니다. 개인정보는 안전하게 보호됩니다.</p>
+        
+        </article>
+        <!-- (도전) canvas: JS 없이 태그만 포함 + 주석으로 의도 설명 -->
+         <canvas width="320" height="120"></canvas>
+         <!-- (도전) aside: 관련 정보 사이드바 -->
+          <aside>
+            <h3>회원가입 팁</h3>
+            <ul>
+                <li>강력한 비밀번호를 사용하세요.</li>
+                <li>정확한 이메일 주소를 입력하세요.</li>
+                <li>개인정보 보호에 유의하세요.</li>
+            </ul>
+        </aside>
+        </main>
+         <!-- (도전) footer: 저작권 + 연락 링크 + 멀티미디어 -->
+        <footer>
+        <p>© 2025 Your Website | <a href="mailto:support@example.com">Contact Support</a></p>
+         <!-- 추가: YouTube iframe -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HYX8hhyXVkk?si=vKV5Uy56c44UIJqr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </iframe>
+    </footer>
+    </body>
+</html>

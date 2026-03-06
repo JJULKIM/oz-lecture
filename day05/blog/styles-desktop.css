@@ -1,0 +1,114 @@
+/* =========================
+   Desktop First (기본: 데스크톱)
+   - 큰 화면 기준으로 먼저 스타일 작성
+   - 이후 max-width로 태블릿/모바일 대응
+========================= */
+
+/* 박스모델 (권장: 전체 통일) */
+* {
+    box-sizing: border-box;     
+}
+
+/* body: 데스크톱 기준 */
+body {
+    max-width: 80vw;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+/* header */
+header {
+    padding: 2rem;
+    border-bottom: 0.2rem solid #333;
+}   
+
+/* h1 크기 */
+h1 {
+    font-size: 2.5rem;
+}
+
+/* nav: 가로 */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+/* section 공통 여백 */
+section {
+    margin: 2vw;
+}
+
+/* posts :3열 그리드 */
+#posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+/* *post 카드 */
+.post {
+    padding: 1.5rem;
+    border : 0.2rem solid #333;
+}
+/* aside */
+aside {
+    width: 25vw;
+    padding: 1.5rem;
+    margin-right: 2vw;
+    margin-top: 2vw;
+    font-size: 1em;
+}
+/* footer */
+footer {
+    padding: 1.5rem;
+    border-top: 0.2rem solid #333;
+    text-align: center;
+}
+
+/* ==================
+tablet (최대 1023px) 
+=====================*/
+@media (max-width: 1023px) {
+    body {
+        max-width: 90vw;
+    }
+    /* posts: 2열 그리드 */
+    #posts {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    /* Nav: 가로 유지, 간격 축소 */
+    nav ul {
+        gap: 0.5rem;
+    }
+    /* aside : 너비 확대 + 여백 축소 */
+    aside {
+        width: 30vw;
+        margin-right: 1vw;
+    }
+}
+
+/* ==================
+mobile (최대 767px)
+=====================*/
+@media (max-width: 767px) {
+    body {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    /* Nav: 세로로 변경 */
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    /* posts: 1열 그리드 */
+    #posts {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    /* aside: 전체 너비 */
+    aside {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+}

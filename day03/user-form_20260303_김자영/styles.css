@@ -1,0 +1,74 @@
+/* 모든 요소 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form-group::after {
+    content : "";
+    display: block;
+    height: 1px;
+    background-color: #ddd;
+    margin-top: 10px;
+}
+
+
+/* body 스타일 */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    }
+/* 폼 중앙 정렬 */
+#registration-form {
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+
+registration-form .form-group:first-of-type {
+    margin-top: 20px;
+}
+
+h1::after {
+    content: " ✨"; 
+    margin-left: 10px;
+    
+}
+/* 입력 필드 */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    border: 1px solid #ccc;}
+/* 버튼 스타일 */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+/* 버튼 스타일 */
+form p {
+    padding: 5px;
+}
+/* 버튼 스타일 */
+form > p {
+    border-bottom: 1px solid #eee;
+}
+label {
+    display: inline-block;
+    width: 100px;
+}
+label[for="username"]::after,
+label[for="email"]::after,
+label[for="password"]::after {
+    content: " *";
+    color: red;
+}
+select:hover {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-color: #007bff;
+}

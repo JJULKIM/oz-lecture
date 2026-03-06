@@ -1,0 +1,111 @@
+/* 박스모델 기본 리셋 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* mobile first (기본) */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  padding: 1rem;
+}
+header {
+ padding: 1rem;
+ border-bottom: 0.1rem solid #333;
+ margin-bottom: 1rem;
+}
+/* headings : 상대 단위 */
+h1 {font-size: 2rem}
+h2 {font-size: 1.5rem; margin-top: 1rem;}
+h3 {font-size: 1.2rem; ;}
+
+/* nav: 모바일은 세로 메뉴 */
+nav ul {
+   padding: 1rem;
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* posts 섹션 여백 : vw 단위 */
+section {
+  margin: 2vw 1vw;
+}
+
+/* posts : 모바일은 세로로 쌓기 */
+#posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}   
+
+/* Post 카드 */
+.post {
+  padding: 1rem;
+  border : 0.1rem solid #333;
+  margin-bottom: 1rem;
+}
+
+/* aside */
+aside {
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5em;
+}
+/* footer */
+footer {
+  padding: 1rem;
+  border-top: 0.1rem solid #333;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  text-align: center;
+}
+/* =====================
+태블릿 768px 이상 
+=====================*/
+@media (min-width: 768px) {
+  body {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+/* nav 가로 메뉴 */
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  /* posts: 2열 그리드 */
+  #posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  aside {
+    padding: 1.5rem;
+  }
+}
+/*=====================
+ Desktop 1024px 이상 
+ ======================*/
+@media (min-width: 1024px) {
+  body {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  /* posts: 3열 그리드 */
+  #posts {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  aside {
+    width: 25vw;
+    margin-left: 2vw;
+  }
+}   

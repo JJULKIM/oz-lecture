@@ -1,0 +1,163 @@
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+/* heading 스타일 */
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 { font-size: 2em; margin-bottom: 10px; }
+h2 { font-size: 1.5em; margin-bottom: 10px; }
+h3 { font-size: 1.2em; margin-bottom: 8px; }
+
+/* header */
+header {
+    padding: 20px;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+/* nav 기본과제용 */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+nav ul li {
+    display: inline-block;
+}
+nav a {
+    text-decoration: none;
+    color: #007bff;
+}
+/* sticky header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+/* main content layout: section + aside */
+main {
+    display: flex;
+    gap: 20px;
+}
+/* sections */
+section {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+/* about */
+#about {
+    flex: 2;
+}
+/* projects */
+#projects {
+    flex: 2;
+}
+
+/* projects cards container: flex */
+#projects .projects-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+/* project card */
+.project {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+/* aside */
+aside {
+    flex: 1;
+    padding: 10px;
+    border-left: 3px solid #007bff;
+    margin: 20px;
+    position: relative;
+}
+/* position 예시 : aside 안의 h3 위치 조정 */
+aside h3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+}
+/* aside 내용이 겹치지 않도록 여백 */
+aside ul {
+    margin-top: 40px;
+}
+/* footer */
+footer {
+    padding: 20px;
+    border-top: 2px solid #333;
+    margin-top: 20px;
+}
+/* footer p:first-child {
+        display: none;
+    } */
+
+/* ================================
+도전과제 : float / clear 레이아웃 
+==================================== */
+
+main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* nav 메뉴를 float로 가로 배치 */
+nav ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;   
+}
+nav ul li {
+    float: left;
+    margin-right: 20px;
+}
+/* nav float 정리 (겹침 방지) */
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}   
+/* main 영역 float 레이아웃 */
+main .content {
+    float: left;
+    width: 70%;
+}
+aside {
+    float: right;
+    width: 25%;
+    padding: 10px;
+    border-left: 3px solid #007bff;
+    margin: 20px;
+    position: relative;
+}
+/* flooter 는 float 영향을 제거하고 하단으로 */
+footer {
+    clear: both;
+}   
+/* === 프로젝트 3열 float === */
+/* .project {
+    float: left;
+    width: 30%;
+    margin : 1.666%;
+    box-sizing: border-box;
+} */
+
+
+#projects .projects-wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
