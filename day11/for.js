@@ -10,7 +10,7 @@ console.log('11111')
 for (let i =1; i<5; i++) {
     console.log(i)
 }
-console.log("-------------------")
+console.log("-------------------");
 
 // 1부터 10까지 홀수만 찍는 코드
 for (let i = 1; i <=10; i+=2) {
