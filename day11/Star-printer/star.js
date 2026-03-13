@@ -1,0 +1,3 @@
+const STAR = "*";
+
+const getPromptInput = () ==> {\}
