@@ -17,7 +17,7 @@ for (let i = 1; i <=10; i+=2) {
     console.log(i)
 }
 
-console.log("-------------------")
+console.log("-------------------");
 
 //중첩반복문
 for (let i = 0; i < 2; i++) {
