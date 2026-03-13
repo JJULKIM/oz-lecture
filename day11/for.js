@@ -44,5 +44,5 @@ console.log("-------------------")
 //break와 continue
 for (let i = 0; i < 10; i++) {
     console.log(i)
-    if (1 === 5 ) break;
+    if (1 === 5) break;
 }
