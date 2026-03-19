@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day13 Control Node</title>
+  </head>
+  <body>
+    <div>
+      <p id="text">Control Node</p>
+      <p class="hl">하이라이트</p>
+    </div>
+    <div>
+      <p class="item">Item 1</p>
+      <p class="item">Item 2</p>
+      <p class="item">Item 3</p>
+      <p class="item">Item 4</p>
+      <p class="item">Item 5</p>
+      <p class="item">Item 6</p>
+      <p class="item">Item 7</p>
+    </div>
+    <script>
+        const textIdEl = document.getElementById("text");
+        console.log(textIdEl);
+
+        const hlClassEl = document.getElementsByClassName("hl");
+        console.log(hlClassEl);
+
+        // 크롤링
+        const itemClassEl = document.querySelectorAll(".item"); 
+        console.log(itemClassEl);
+        console.log(typeof itemClassEl);
+       
+            const textValue = textIdEl.textContent; // element 의 text 값 추출
+            console.log(textValue);
+            textIdEl.textContent = "Updated COntrol Node";
+
+
+
+    </script>
+  </body>
+</html>

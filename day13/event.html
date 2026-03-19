@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Event</title>
+    </head>
+    <body>
+        <!-- 인라인 이벤트 -->
+        <input id=" "text-input" type="test"
+        onfocus="focusEvent()"
+        onblur="blurEvent()"  />
+
+        <!-- 프로퍼티 이벤트 -->
+         <button id=""property-button>프로퍼티 이벤트</button>
+
+        <button onclick ="ClikEvent()">클릭</button>
+        <div id="container"></div>
+        <script>
+            function ClickEvent () {
+                const input = document.getElementById("text-input");
+                const container = document.getElementById("container");
+                const text = input.value;
+                const p =document.createElement("p");     
+                p.textContent = text;
+                container.appendChild(p);
+            }
+            // 프ㄹ퍼티 이벤트
+
+
+        </script>
+    </body>
+</html>
